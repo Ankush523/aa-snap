@@ -6,6 +6,7 @@ import {
   getSnap,
   sendHello,
   getSCW,
+  sendAATx,
   shouldDisplayReconnectButton,
 } from '../utils';
 import {
@@ -13,6 +14,8 @@ import {
   InstallFlaskButton,
   ReconnectButton,
   SendHelloButton,
+  SendSCWButton,
+  SendAATxButton,
   Card,
 } from '../components';
 
@@ -136,6 +139,15 @@ const Index = () => {
     }
   };
 
+  const handleSendAATxClick = async () => {
+    try {
+      await sendAATx();
+    } catch (e) {
+      console.error(e);
+      dispatch({ type: MetamaskActions.SetError, payload: e });
+    }
+  };
+
   return (
     <Container>
       <Heading>
@@ -218,10 +230,23 @@ const Index = () => {
             description:
               'Display SCW Address',
             button: (
-              <SendHelloButton
-                onClick={handleGetSCWClick}
-                disabled={!state.installedSnap}
-              />
+              <SendSCWButton onClick={handleGetSCWClick} isabled={!state.installedSnap}/>
+            ),
+          }}
+          disabled={!state.installedSnap}
+          fullWidth={
+            state.isFlask &&
+            Boolean(state.installedSnap) &&
+            !shouldDisplayReconnectButton(state.installedSnap)
+          }
+        />
+        <Card
+          content={{
+            title: 'Send Tx',
+            description:
+              'Send a test transaction from your SCW Address to your specified address',
+            button: (
+              <SendAATxButton onClick={handleSendAATxClick} isabled={!state.installedSnap}/>
             ),
           }}
           disabled={!state.installedSnap}

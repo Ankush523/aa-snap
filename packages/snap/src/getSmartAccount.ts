@@ -21,5 +21,5 @@ export const getSmartAccount = async() => {
 
     const address = simpleAccount.getSender();
     console.log('SimpleAccount Address : ',address);
-    return address;
+    return simpleAccount;
 }
