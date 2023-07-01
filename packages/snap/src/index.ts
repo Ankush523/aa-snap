@@ -8,7 +8,7 @@ const aa_transact = async() => {
   const simpleAcc = await getSmartAccount();
   const client = await Client.init(rpcUrl);
   const aaTx = await client.sendUserOperation(
-    simpleAcc.execute("0xCF1E6Ab1949D0573362f5278FAbCa4Ec74BE913C",10000,"0x"),
+    simpleAcc.execute("0x1e87f3F4FDBb276250fC064a3cf0069592280601",10000,"0x"),
     { onBuild: (op) => console.log("Signed UserOperation:", op) }
   );
   const userOpHash = aaTx.userOpHash
