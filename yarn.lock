@@ -5,6 +5,34 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@account-abstraction/contracts@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@account-abstraction/contracts@npm:0.5.0"
+  checksum: 792a82e9ac3dac2d0c6b92133998b567acfc980aea6bb6d51377d95039a2a4c8cbd764c02ebe4d16ea7f7e18ff0724a0ae41970ba2b1bbcaf89e9bf875806ec5
+  languageName: node
+  linkType: hard
+
+"@account-abstraction/contracts@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@account-abstraction/contracts@npm:0.6.0"
+  checksum: 745e838e2cb04c89a9c0df11d022c1d604b1e440c9cd65c2014edd9b1056809fec2e363b42ec09883d49dbe09f9597d8339c90d57763a1621fb515edf5fef35d
+  languageName: node
+  linkType: hard
+
+"@account-abstraction/utils@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@account-abstraction/utils@npm:0.5.0"
+  dependencies:
+    "@account-abstraction/contracts": ^0.5.0
+    "@ethersproject/abi": ^5.7.0
+    "@ethersproject/providers": ^5.7.0
+    "@openzeppelin/contracts": ^4.7.3
+    debug: ^4.3.4
+    ethers: ^5.7.0
+  checksum: e9ace5b70f5c9ae4a9580cd4f95e0768f688334c82caff9f85d00cc08a28acb2e16ffbd31911f9a3f3a3cada580d84ce06874e236040be35fd40e5da4bf3abb7
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.1
   resolution: "@ampproject/remapping@npm:2.2.1"
@@ -3201,7 +3229,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/providers@npm:5.7.2":
+"@ethersproject/providers@npm:5.7.2, @ethersproject/providers@npm:^5.7.0, @ethersproject/providers@npm:^5.7.2":
   version: 5.7.2
   resolution: "@ethersproject/providers@npm:5.7.2"
   dependencies:
@@ -5142,6 +5170,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@openzeppelin/contracts@npm:^4.7.3, @openzeppelin/contracts@npm:^4.8.2":
+  version: 4.9.2
+  resolution: "@openzeppelin/contracts@npm:4.9.2"
+  checksum: 0538b18fe222e5414a5a539c240b155e0bef2a23c5182fb8e137d71a0c390fe899160f2d55701f75b127f54cc61aee4375370acc832475f19829368ac65c1fc6
+  languageName: node
+  linkType: hard
+
 "@parcel/bundler-default@npm:2.6.2":
   version: 2.6.2
   resolution: "@parcel/bundler-default@npm:2.6.2"
@@ -5511,6 +5546,22 @@ __metadata:
   peerDependencies:
     "@parcel/core": ^2.6.2
   checksum: 92b65cd3fde225dcd377f1f529caeb0d8ee56a9aeef3785716b1ad210132e5dc1b6bd9b7c4c6920094e0030c6aad9cc42d5dbf7b4fb0fb4668eedfd332e0b242
+  languageName: node
+  linkType: hard
+
+"@pimlico/erc20-paymaster@npm:^0.0.12":
+  version: 0.0.12
+  resolution: "@pimlico/erc20-paymaster@npm:0.0.12"
+  dependencies:
+    "@account-abstraction/contracts": ^0.6.0
+    "@account-abstraction/utils": ^0.5.0
+    "@ethersproject/abi": ^5.7.0
+    "@ethersproject/abstract-provider": ^5.7.0
+    "@ethersproject/providers": ^5.7.2
+    "@openzeppelin/contracts": ^4.8.2
+    ethers: ^5.7.2
+    solady: ^0.0.90
+  checksum: f3036402c1e35ec6548bce15dddaa33b74b98b34bc1f839bcb4e2a915d3132c304805ce815c6b686da6afb01a86c2fe500d9b89835b6b4791b598caecdc3fa44
   languageName: node
   linkType: hard
 
@@ -11705,7 +11756,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethers@npm:5, ethers@npm:^5.7.2":
+"ethers@npm:5, ethers@npm:^5.7.0, ethers@npm:^5.7.2":
   version: 5.7.2
   resolution: "ethers@npm:5.7.2"
   dependencies:
@@ -20341,6 +20392,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "snap@workspace:packages/snap"
   dependencies:
+    "@account-abstraction/contracts": ^0.6.0
     "@jest/globals": ^29.5.0
     "@lavamoat/allow-scripts": ^2.0.3
     "@metamask/auto-changelog": ^2.6.0
@@ -20352,6 +20404,7 @@ __metadata:
     "@metamask/snaps-jest": ^0.35.2-flask.1
     "@metamask/snaps-types": ^0.32.2
     "@metamask/snaps-ui": ^0.32.2
+    "@pimlico/erc20-paymaster": ^0.0.12
     "@typescript-eslint/eslint-plugin": ^5.33.0
     "@typescript-eslint/parser": ^5.33.0
     buffer: ^6.0.3
@@ -20442,6 +20495,13 @@ __metadata:
     ip: ^2.0.0
     smart-buffer: ^4.2.0
   checksum: 0b5d94e2b3c11e7937b40fc5dac1e80d8b92a330e68c51f1d271ce6980c70adca42a3f8cd47c4a5769956bada074823b53374f2dc5f2ea5c2121b222dec6eadf
+  languageName: node
+  linkType: hard
+
+"solady@npm:^0.0.90":
+  version: 0.0.90
+  resolution: "solady@npm:0.0.90"
+  checksum: dd3a34509040d1d6101e25823f3e3001e9fb37cb56872947b23007f63e203d25b55fc12d0d69846e47b3bf967faea0ff4f0ca0e0f99dede73a6eb76c1924c200
   languageName: node
   linkType: hard
 

@@ -27,8 +27,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@account-abstraction/contracts": "^0.6.0",
     "@metamask/snaps-types": "^0.32.2",
     "@metamask/snaps-ui": "^0.32.2",
+    "@pimlico/erc20-paymaster": "^0.0.12",
     "buffer": "^6.0.3",
     "ethers": "5",
     "userop": "^0.3.1"
